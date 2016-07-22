@@ -1,0 +1,20 @@
+/* pagination (wp the_posts_pagination) */
+.pagination {
+	margin: 40px 0;
+	.screen-reader-text {
+		display: none;
+	}
+	.nav-links {
+		text-align: center;
+	}
+	.page-numbers {
+		display: inline-block;
+		padding: .25em .75em;
+		border: 1px solid #DDDDDD;
+		&.current {
+			font-weight: bold;
+		}
+		&.next {
+		}
+	}
+}

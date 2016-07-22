@@ -1,0 +1,46 @@
+// ==============================
+// Width
+// ==============================
+
+$width: 960px;
+
+
+// ==============================
+// Breakpoint
+// ==============================
+
+$breakpoint: 768px;
+$breakpoint_small: 480px;
+
+
+// ==============================
+// Images directory
+// ==============================
+
+$image_path: '../images';
+
+
+// ==============================
+// Color
+// ==============================
+
+$main-color: #007837;
+
+
+// ==============================
+// Font
+// ==============================
+
+// default font-family
+$font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// serif font-family (heading)
+$font_serif: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+// default font-size
+$fontsize_base: 14;
+
+// default line-height
+$line-height: 1.8;
+
+// default font color
+$color: #666666;

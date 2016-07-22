@@ -1,0 +1,82 @@
+/* heading */
+
+// common
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	line-height: 1.4;
+}
+
+h1, .h1 {
+	font-size: 3rem;
+}
+
+h2, .h2 {
+	color: $main-color;
+	margin-top: 2em;
+	// sp
+	font-size: 1.8rem;
+	font-weight: bold;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		font-size: 2.6rem;
+		font-weight: normal;
+	}
+
+	// caption inside h2
+	& > .cap {
+		font-size: 1.0rem;
+		color: $color;
+		margin-left: 15px;
+		@media screen and (min-width: $breakpoint) {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+h3, .h3 {
+	// sp
+	font-size: 1.8rem;
+	font-weight: bold;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		font-size: 2.6rem;
+		font-weight: normal;
+	}
+}
+
+h4, .h4 {
+	// sp
+	font-size: 1.8rem;
+	font-weight: bold;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+}
+
+h5, .h5 {
+	// sp
+	font-size: 1.8rem;
+	font-weight: bold;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		font-size: 2.0rem;
+		font-weight: normal;
+	}
+}
+
+h6, .h6 {
+	// sp
+	font-size: 1.8rem;
+	font-weight: bold;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		font-size: 1.8rem;
+		font-weight: normal;
+	}
+}

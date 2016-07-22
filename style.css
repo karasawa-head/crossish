@@ -1,0 +1,27 @@
+/*
+Theme Name: Crossish
+Theme URI: https://github.com/karasawa-head/crossish
+Author: karasawa-head
+Author URI: https://github.com/karasawa-head/
+Description: まず初めに書いて置きますが、僕はPHPを書くのは得意ではないので読みにくかったらもうしわけありません。
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, custom-menu
+*/
+
+.sticky {}
+
+.wp-caption {}
+.wp-caption-text {}
+
+.gallery-caption {}
+
+.bypostauthor {}
+
+.screen-reader-text {}
+
+/* common.css */
+.alignleft {}
+.alignright {}
+.aligncenter {}

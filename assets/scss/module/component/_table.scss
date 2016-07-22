@@ -1,0 +1,39 @@
+/* table */
+.table {
+
+	// border
+	&--border {
+		border-width: 1px;
+		th,
+		td {
+			border-width: 1px;
+		}
+	}
+
+	// full
+	&--full {
+		width: 100%;
+	}
+}
+
+/* in form */
+form table {
+	border: 1px solid #DDDDDD;
+	th,
+	td {
+		display: block;
+		padding: 3px;
+		border: 1px solid #DDDDDD;
+		@media screen and (min-width: $breakpoint_small) {
+			display: table-cell;
+		}
+	}
+	th {
+		background-color: #f1f1f1;
+		text-align: left;
+		font-weight: normal;
+	}
+	td {
+		background-color: #fafafa;
+	}
+}

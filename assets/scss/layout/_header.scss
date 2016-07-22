@@ -1,0 +1,210 @@
+// sp header size
+$sp_header_height: 60px;
+
+
+/* header layout */
+.header {
+	&__inner {
+		position: relative;
+		max-width: $width;
+		margin: auto;
+		height: $sp_header_height;
+		padding-left: 12px;
+		padding-right: 12px;
+		// pc
+		@media screen and (min-width: $breakpoint) {
+			padding-left: 0;
+			padding-right: 0;
+			height: auto;
+		}
+	}
+}
+
+/* header logo */
+.header__logo {
+	margin: 0;
+	padding: 0;
+	height: $sp_header_height;
+	line-height: $sp_header_height;
+	img {
+		max-height: 40px;
+		width: auto;
+		vertical-align: middle;
+	}
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		height: auto;
+		max-height: none;
+		padding: 20px 0;
+		line-height: 1;
+	}
+}
+
+/* header description */
+.site-description {
+	display: none; // mobile: hidden
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 5px 0;
+	&__text {
+		max-width: $width;
+		margin: auto;
+		font-size: 1.3rem;
+	}
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		display: block;
+	}
+}
+
+/* header navigation layout */
+.slicknav_nav,
+.main-nav {
+	display: none; // mobile : hidden
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	border-top: 0;
+	border-bottom: 0;
+	background-color: rgba(32, 32, 32, 0.8); // mobile
+	color: #FFFFFF;
+	// pc
+	@media screen and (min-width: $breakpoint) {
+		display: block;
+		position: static;
+		border-top: 1px solid #CCCCCC;
+		border-bottom: 1px solid #CCCCCC;
+		background-color: #FFFFFF;
+	}
+	a {
+		display: block;
+		height: 100%;
+		padding: 1.5rem 10px 1.5rem;
+		text-decoration: none;
+		// background-color: rgba(32, 32, 32, 0.8);
+		color: #FFFFFF;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: #222222;
+		}
+		// pc
+		@media screen and (min-width: $breakpoint) {
+			background-color: #FFFFFF;
+			color: $color;
+			&:hover,
+			&:focus {
+				background-color: #F0F0F0;
+			}
+		}
+	}
+	&-list {
+		width: 100%;
+		margin: auto;
+		padding: 0;
+		list-style: none;
+		// pc
+		@media screen and (min-width: $breakpoint) {
+			display: table;
+			table-layout: fixed;
+			max-width: $width;
+		}
+	}
+	.menu-item,
+	&-list__item {
+		float: left;
+		width: 50%;
+		border-color: #999999;
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		&:nth-child(odd) {
+			border-right-width: 1px;
+		}
+		// pc
+		@media screen and (min-width: $breakpoint) {
+			float: none;
+			width: auto;
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+			border-color: #CCCCCC;
+			border-right-width: 1px;
+			border-bottom-width: 0;
+			&:first-child {
+				border-left-width: 1px;
+			}
+			&.current-menu-item a,
+			&--active a {
+				border-top: 0.3rem solid $main-color;
+				padding-top: (1.5 - 0.3) + rem;
+			}
+		}
+	}
+}
+
+/* header SP slick nav (jQuery plugin) */
+.slicknav {
+	&_menu {
+		display: block;
+		@media screen and (min-width: $breakpoint) {
+			display: none;
+		}
+	}
+
+	// button
+	&_btn {
+		padding: 10px;
+		position: absolute;
+		z-index: 100;
+		top: ($sp_header_height - 35) / 2;
+		right: 5px;
+	}
+	&_menutxt {
+		display: none;
+	}
+	&_icon {
+		&-bar {
+			transition: all .15s ease-out;
+			display: block;
+			width: 20px;
+			height: 3px;
+			margin-bottom: 3px;
+			background-color: #4D4D4D;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// nav list
+	&_nav {
+		position: absolute;
+		top: $sp_header_height; // 3px : top border
+	}
+}
+
+/* SP nav button ≡ -> × */
+.slicknav_open {
+	.slicknav_icon-bar {
+		&:first-child {
+			transform: translateY(6px) rotate(45deg);
+		}
+		&:nth-child(2) {
+			opacity: 0;
+		}
+		&:last-child {
+			transform: translateY(-6px) rotate(-45deg);
+		}
+	}
+}
+
+/* PC fixed nav */
+@media screen and (min-width: $breakpoint) {
+	.is-nav-fixed {
+		padding-top: 5.7rem;
+		.main-nav {
+			position: fixed;
+			top: 0;
+		}
+	}
+}

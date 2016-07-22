@@ -1,0 +1,70 @@
+/* button */
+@mixin button {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+	font-size: ($fontsize_base / 10) + rem;
+	line-height: 1;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	&:link,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+.button {
+	@include button;
+	background-color: transparent;
+	color: $color;
+	border: 1px solid #DDDDDD;
+	border-radius: 0;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	padding-top: calc(0.75em - 1px);
+	padding-bottom: calc(0.75em - 1px);
+	padding-left: 1em;
+	padding-right: 1em;
+	font-weight: normal;
+	transition:
+		border-color .15s linear,
+		background-color .15s linear,
+		color .15s linear;
+	&:focus,
+	&:hover {
+		background-color: #f0f0f0;
+		outline: 0;
+	}
+
+	// block
+	&--block {
+		display: block;
+		width: 100%;
+	}
+
+	// primary color (green)
+	&--primary {
+		border-color: $main-color;
+		background-color: $main-color;
+		color: #FFFFFF;
+		&:link,
+		&:visited {
+			color: #FFFFFF;
+		}
+		&:hover,
+		&:focus {
+			border-color: lighten($main-color, 15%);
+			background-color: lighten($main-color, 15%);
+		}
+	}
+
+	// large
+	&--large{
+		font-size: 2rem;
+	}
+
+	&--small {
+		font-size: 1.2rem;
+	}
+}

@@ -1,0 +1,6 @@
+/* font-size (1rem = 10px) */
+@for $i from 10 through 42 {
+	.font#{$i} {
+		font-size: ($i / 10) + rem !important;
+	}
+}

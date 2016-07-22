@@ -1,0 +1,96 @@
+/* main container */
+.body {
+	margin: 0 auto 40px;
+}
+
+/* page-title */
+.page-header {
+	display: flex;
+	flex-direction: column-reverse;
+	margin-bottom: 40px;
+	padding: 10px 0 10px;
+	background-color: $main-color;
+	// @media screen and (min-width: $breakpoint) {
+	// 	padding: 15px 0 10px;
+	// }
+	&__text {
+		width: 100%;
+		max-width: $width;
+		background-color: $main-color;
+		color: #FFFFFF;
+		margin: 0 auto;
+		padding: 0 5px;
+		font-family: $font_serif;
+		font-weight: normal;
+		&--main{
+			font-size: 2.0rem;
+			line-height: 1.4;
+			@media screen and (min-width: $breakpoint) {
+				font-size: 4.0rem;
+			}
+		}
+		&--sub {
+			font-size: 1.2rem;
+			@media screen and (min-width: $breakpoint) {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+/* contents */
+// .contents,
+// .article__body {
+.page-content {
+	@include clearfix;
+	max-width: $width;
+	margin: auto;
+	padding: 0 10px;
+	@media screen and (min-width: $breakpoint) {
+		padding: 0;
+	}
+}
+
+section.border {
+	border-bottom: 1px solid #DDDDDD;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	& + section {
+		& > :first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+/* home - key visual */
+.key-visual {
+	margin-bottom: 20px;
+	@media screen and (min-width: $breakpoint) {
+		margin-bottom: 40px;
+	}
+	// pc: background-image
+	&--pc {
+		display: none;
+		@media screen and (min-width: $breakpoint) {
+			display: block;
+			height: 300px; // default
+			background-position: 50% 0;
+			img {
+				visibility: hidden;
+			}
+		}
+	}
+	// sp: img tag
+	&--sp {
+		display: block;
+		text-align: center;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		@media screen and (min-width: $breakpoint) {
+			display: none;
+		}
+	}
+}
